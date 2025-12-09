@@ -17,7 +17,7 @@ OUTPUT_DIR = "outputs/eda_plots"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-print("📌 Loading dataset...")
+print("Loading dataset...")
 df = pd.read_csv(INPUT_PATH, parse_dates=["timestamp"])
 
 print("Dataset loaded successfully.")
@@ -28,7 +28,7 @@ print(df.head())
 # 2. Basic descriptive statistics
 # --------------------------------------------
 
-print("\n📌 Generating descriptive statistics...")
+print("\n Generating descriptive statistics...")
 desc_path = os.path.join(OUTPUT_DIR, "descriptive_statistics.csv")
 df.describe(include="all").to_csv(desc_path)
 print(f"Descriptive statistics saved to {desc_path}")
@@ -59,7 +59,7 @@ for col in num_cols:
 # --------------------------------------------
 
 if "volume" in df.columns:
-    print("📊 Plotting traffic volume over time...")
+    print("Plotting traffic volume over time...")
     plt.figure(figsize=(12, 5))
     df.resample("H", on="timestamp")["volume"].mean().plot()
     plt.title("Hourly Traffic Volume Trend")
@@ -75,7 +75,7 @@ if "volume" in df.columns:
 # --------------------------------------------
 
 if "intersection" in df.columns and "density_level" in df.columns:
-    print("📌 Plotting congestion levels by intersection...")
+    print("Plotting congestion levels by intersection...")
     plt.figure(figsize=(10, 6))
     sns.boxplot(data=df, x="intersection", y="density_level")
     plt.title("Congestion Level by Intersection")
@@ -90,7 +90,7 @@ if "intersection" in df.columns and "density_level" in df.columns:
 # --------------------------------------------
 
 if "speed" in df.columns and "vehicle_id" in df.columns:
-    print("📈 Plotting speed distribution by vehicle ID...")
+    print(" Plotting speed distribution by vehicle ID...")
     plt.figure(figsize=(10, 6))
     sns.boxplot(data=df, x="vehicle_id", y="speed")
     plt.title("Vehicle Speed Distribution per Vehicle ID")
@@ -104,7 +104,7 @@ if "speed" in df.columns and "vehicle_id" in df.columns:
 # --------------------------------------------
 
 if "rainfall" in df.columns and "volume" in df.columns:
-    print("🌧 Analyzing rainfall vs. traffic volume...")
+    print("Analyzing rainfall vs. traffic volume...")
 
     plt.figure(figsize=(8, 5))
     sns.scatterplot(data=df, x="rainfall", y="volume")
@@ -127,7 +127,7 @@ if "temperature" in df.columns and "speed" in df.columns:
 # --------------------------------------------
 
 if "event_active" in df.columns:
-    print("🎉 Analyzing event impact on traffic...")
+    print("Analyzing event impact on traffic...")
 
     plt.figure(figsize=(8, 5))
     sns.boxplot(data=df, x="event_active", y="volume")
@@ -144,5 +144,5 @@ if "event_active" in df.columns:
     plt.close()
 
 
-print("\n✅ EDA COMPLETED SUCCESSFULLY!")
-print(f"📂 All plots saved inside: {OUTPUT_DIR}")
+print("\n EDA COMPLETED SUCCESSFULLY!")
+print(f" All plots saved inside: {OUTPUT_DIR}")
