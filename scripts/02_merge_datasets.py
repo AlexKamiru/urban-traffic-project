@@ -139,7 +139,7 @@ merged_df['event_active'] = merged_df.apply(lambda row: is_event_active(row, eve
 # Save merged dataset
 # ---------------------------
 merged_df.to_csv(MERGED_FILE, index=False)
-print(f"\n✓ Merged dataset saved to: {MERGED_FILE}")
+print(f"\n Merged dataset saved to: {MERGED_FILE}")
 print(f"  - Rows: {len(merged_df):,}")
 print(f"  - Columns: {len(merged_df.columns)}")
 

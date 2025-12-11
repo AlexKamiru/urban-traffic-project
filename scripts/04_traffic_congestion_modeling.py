@@ -354,5 +354,5 @@ print(f"""
    • Visualizations from plots/ folder
    • Report from reports/ folder
 
-Your modeling demonstrates professional data science practice! 🚀
+Your modeling demonstrates professional data science practice! 
 """)
