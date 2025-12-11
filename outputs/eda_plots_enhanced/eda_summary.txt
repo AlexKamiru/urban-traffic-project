@@ -1,0 +1,51 @@
+============================================================
+EXPLORATORY DATA ANALYSIS SUMMARY
+============================================================
+
+Dataset Information:
+- Shape: (87605, 21)
+- Time range: 2024-01-01 00:00:00 to 2024-12-31 23:30:00
+- Total columns: 21
+- Numerical columns: 8
+- Categorical columns: 5
+
+Missing Values Summary:
+- volume: 24127 missing (27.5%)
+- avg_speed: 24127 missing (27.5%)
+- occupancy: 24127 missing (27.5%)
+- queue_length: 24127 missing (27.5%)
+- density_level: 24127 missing (27.5%)
+
+Key Statistics:
+- volume: mean=274.16, std=129.99, range=[50.00, 499.00]
+- speed: mean=31.79, std=15.06, range=[0.00, 64.87]
+- occupancy: mean=0.50, std=0.23, range=[0.10, 0.90]
+- queue_length: mean=20.65, std=10.93, range=[2.00, 39.00]
+- temperature: mean=21.95, std=4.58, range=[14.00, 30.00]
+- rainfall: mean=2.93, std=3.62, range=[0.00, 10.00]
+
+Traffic Pattern Insights:
+- Peak traffic hour: 22:00
+- Events occurred in 103 records (0.1% of data)
+
+Weather Impact Insights:
+- Rainy records: 58241 (66.5%)
+
+Plots Generated:
+- avg_speed_enhanced_dist.png
+- correlation_matrix.png
+- event_impact_enhanced.png
+- humidity_enhanced_dist.png
+- intersection_analysis_enhanced.png
+- occupancy_enhanced_dist.png
+- queue_length_enhanced_dist.png
+- rainfall_enhanced_dist.png
+- rainfall_impact_enhanced.png
+- speed_analysis_enhanced.png
+- speed_enhanced_dist.png
+- temperature_enhanced_dist.png
+- temperature_impact_enhanced.png
+- traffic_volume_temporal_analysis.png
+- volume_enhanced_dist.png
+
+Total plots generated: 15
